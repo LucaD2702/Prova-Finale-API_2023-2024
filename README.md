@@ -50,7 +50,7 @@ La gestione del magazzino è la parte più complessa, poiché richiede di trovar
 * **Albero Binario di Ricerca (BST):** Ogni nodo dell'albero rappresenta un tipo di ingrediente (es. "farina"). La chiave del nodo è un intero a 32-bit generato dal nome dell'ingrediente. Questo garantisce una ricerca efficiente, $O(\log N)$ in media.
 * **Min-Heap (Lotti):** All'interno di ogni nodo del BST, i lotti di quell'ingrediente sono memorizzati in un *Min-Heap* basato sulla data di scadenza. Questo garantisce che il lotto con la scadenza più prossima sia sempre in radice, estraibile in $O(\log M)$ (dove $M$ è il numero di lotti).
 
-### Gestione Ordini (Code e Min-Heap)
+### Gestione Ordini (Linked List e Min-Heap)
 Il ciclo di vita di un ordine attraversa diverse strutture:
 * **Ordini Sospesi (Linked List):** Gli ordini che non possono essere preparati subito vengono inseriti in coda a una lista concatenata, garantendo la logica FIFO $O(1)$ per l'inserimento. Ad ogni rifornimento viene verificato se è possibile preparare uno (o più) ordini inseriti in lista d'attesa.
 * **Ordini in Pronta Consegna (Min-Heap):** I dolci preparati vengono inseriti in un Min-Heap ordinato per **tempo di arrivo dell'ordine**. Questo assicura che il corriere carichi sempre gli ordini meno recenti per primi.
