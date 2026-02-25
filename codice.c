@@ -36,7 +36,7 @@ typedef struct lotto{
 }lotto;
 
 typedef struct lotti {
-    //char nome[MAXCHAR]; // <-- forse si può rimuovere
+    //char nome[MAXCHAR];
     lotto MinHeap[HEAP_SIZE];
     int qntTot;                         //qntTot = somma delle qnt di ogni lotto
     int heapSize;
@@ -801,7 +801,7 @@ void lettura_nome(char *scan){
 
     i = 0;
     c = getchar_unlocked();
-    while (c != ' ' && c != '\n') {     //se non funziona aggiungere un getchar in rimuovi ricetta e togliere la condizione '\n' qui
+    while (c != ' ' && c != '\n') {
         *(scan+i) = c;
         i++;
         c = getchar_unlocked();
